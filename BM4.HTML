@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CONCEPTS OF PHYSICS </title>
+<style>
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  #image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .image {
+    max-width: 50%;
+    height: 70%;
+    margin-bottom: 20px;
+  }
+</style>
+</head>
+<body>
+
+<div id="image-container"></div>
+
+<script>
+  const imageUrls = [
+  "https://www.inspedu.in/assets/ckfinder/userfiles/images/518679340001.jpg",
+  " https://www.inspedu.in/assets/ckfinder/userfiles/images/13281278170002.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/18319101500003.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/10317423830004.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14428367050005.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5047824630006.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5294245690007.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/17560665340008.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/10579981010009.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14605689240010.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5197019930011.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/894253240012.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14916697570013.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/13999654630014.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/18227242500015.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4338835920016.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/6060468030017.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11021595490018.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14809144890019.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14705360130020.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/6217180870021.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/2368872360022.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/15670761780023.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/21408010840024.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/17555240380025.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14360270640026.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5813006420027.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/18047735230028.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/14002767430029.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4992796620030.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/9111643140031.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/19279286240032.jpg",,
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/9531411950033.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/20853358960034.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11441857260035.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/15803669460036.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/10650523190037.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/265918160038.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/12447063910039.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/15168913340040.jpg",,,
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/12300095900041.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11657668490042.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11017534430043.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/18382461690044.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11474108310045.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/1458883830046.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4324134310047.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/16143636580048.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/12615339430049.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/10875799650050.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/8168851600051.jpg",,
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4289322620052.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5626303370053.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/1409948190054.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/20459921560055.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/1860418860056.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/8772807940057.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/5016499540058.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/13981758100059.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4929691800060.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/19922712200061.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4894467340062.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/8806591450063.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/16914640680064.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/9275620970065.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/6605761010066.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/3206596920067.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/4847703090068.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/15430433550069.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/1294598130070.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/11147516420071.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/1472599960072.jpg",
+" https://www.inspedu.in/assets/ckfinder/userfiles/images/16226740490073.jpg",
+  ];
+
+  const imageContainer = document.getElementById("image-container");
+
+  imageUrls.forEach(url => {
+    const img = document.createElement("img");
+    img.classList.add("image");
+    img.src = url;
+    img.alt = "Image";
+    imageContainer.appendChild(img);
+  });
+</script>
+
+</body>
+</html>
